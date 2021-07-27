@@ -13,7 +13,9 @@ function App() {
   }, [])
 
   const [sortData, setFilter] = useState('');
-    const filteredNews = hackerNews?.filter( news =>{
+  
+  // eslint-disable-next-line  
+  const filteredNews = hackerNews?.filter( news =>{
 		if(sortData === null)
 			return news
       if(news?.title.toLowerCase().includes(sortData.toLowerCase())||news?.author.toLowerCase().includes(sortData.toLowerCase())){
